@@ -21,6 +21,11 @@ trait ASTEval extends ASTFunctions {
     case Max(e: List[Expr])      => e.map(a => eval(a,context)).reduceLeft(max)
     //convert expression to double if type is Number
     case Number(e: String)       => e.toDouble
+    //if condition 
+    case IfCondition(e1: Expr,e2:Expr,cond:String,thenExp:Expr)      => cond match {
+      case ">"  => if(eval(e1,context)>eval(e2,context)) eval(thenExp,context) else 0
+      case "<"  => if(eval(e1,context)<eval(e2,context)) eval(thenExp,context) else 0
+    }
     //get variable value form the context
     case Var(varName:String)=> context.get(varName) match {
       case Some(v)=> v
