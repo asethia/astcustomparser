@@ -16,4 +16,6 @@ trait ASTFunctions {
   case class Max(e1: List[Expr]) extends Expr
   //varibale defination
   case class Var(e1: String) extends Expr
+  //if condition with then
+  case class IfCondition(e1:Expr,e2:Expr,cond:String,thenExp: Expr) extends Expr
  }
