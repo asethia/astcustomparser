@@ -1,3 +1,5 @@
+<h2>Grammer based AST Tree</h2>
+
 This project is based on Scala, building AST Tree using Scala Combinator. The project supports Max, Min and arthimetic operators like "+"."-","/","*".
 
 The parser accepts input in form as String and creates intermediate representation (IR) and using evaluator parse the result.
@@ -29,3 +31,5 @@ Few of sample example based on above grammar can be:
 The evaluator accepts result of parser and context (as Map object) to get value of variables.   
 
 This can extend with other business oriented and aggregation functions.
+
+Future work: Retail DSL in scala.
