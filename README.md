@@ -21,3 +21,5 @@ Few of sample example based on above grammer can be:
 4. Max(var(a_45),var(b),2*15,10+2)
 
 The evaluator accepts result of parser and context (as Map object) to get value of variables.   
+
+This can extend with other business oriented, aggregation functions and logical functions (like If, etc).
