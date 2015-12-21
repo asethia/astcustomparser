@@ -18,5 +18,11 @@ object ASTParserCLI extends ASTParser with ASTEval {
       case Failure(msg, _)    => println(msg)
       case Error(msg, _)      => println(msg)
     }
+    
+    parseAll(exp_function,"if(4<5) then Max(2,10)") match {
+      case Success(result, _) => {println("AST :"+result);println("Eval :"+ eval(result,context))}
+      case Failure(msg, _)    => println(msg)
+      case Error(msg, _)      => println(msg)
+    }
   }
 }
