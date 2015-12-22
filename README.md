@@ -1,4 +1,4 @@
-<h2>Grammer based AST Tree</h2>
+<h2>Grammar based AST Tree</h2>
 
 This project is based on Scala, building AST Tree using Scala Combinator. The project supports Max, Min and arthimetic operators like "+"."-","/","*".
 
