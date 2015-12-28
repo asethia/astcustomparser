@@ -32,4 +32,4 @@ The evaluator accepts result of parser and context (as Map object) to get value 
 
 This can extend with other business oriented and aggregation functions.
 
-Future work: Retail DSL in scala.
+Future work: <a href="https://github.com/asethia/retaildsl">Retail DSL in scala</a>
