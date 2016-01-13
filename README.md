@@ -6,15 +6,15 @@ The parser accepts input in form as String and creates intermediate representati
 
 The parser grammar is:
 
-exp_function ← expr | function | variable | conditional <br/>
+exp_function ← expression | function | variable | conditional <br/>
 function ← (‘Max’|‘Min’)  (‘(" exp_function ‘,’ ‘)’)* <br/>
 conditional ← ifCondition (thenCondition)
 ifCondition ← (if|If) (‘(’ exp_function (‘>’ / ‘<’)  exp_function ‘(’)
 thenCondition ← (then|Then|THEN) (exp_function)
 variable ← (var) (‘(’ [a-zA-Z]+ ‘)’)* <br/>
-Expression ← Term ((‘+’ / ‘-’) Term)* <br/>
-Term ← Factor ((‘*’ / ‘/’) Factor)* <br/>
-Factor ← Number (‘(’ expr  ‘)’)* <br/>
+expression ← term ((‘+’ / ‘-’) term)* <br/>
+term ← factor ((‘*’ / ‘/’) factor)* <br/>
+factor ← Number (‘(’ expr  ‘)’)* <br/>
 
 This grammar supports Max, Min functions, these functions accepts list of exp_functions. The grammar supports variable defination; that can be define as var(x), var(Test_Var), etc.
 
